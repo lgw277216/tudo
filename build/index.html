@@ -3,25 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="container">
-        <h1>我的任务</h1>
-        <form class="add-task">
-            <input type="text" class="text" placeholder="输入你的任务">
-            <input type="submit">
+<div class="msg">
+    <span class="msg-content">123</span>
+    <span class="msg-konw">我知道了</span>
+</div>
+<div class="container">
+    <h1>我的任务</h1>
+    <form class="add-task">
+        <input type="text" class="text" placeholder="输入你的任务">
+        <input type="submit">
+    </form>
+    <ul class="task-list">
+        <!--<li>
+            <input type="checkbox" class="complate">
+            <p class="content">晚上20:00斗地主</p>
+            <div class="right">
+                <span class="delete r-main">删除</span>
+                <span class="deteal r-main">详细</span>
+            </div>
+        </li>-->
+    </ul>
+    <!--<div class="task-detail-mask"></div>
+    <div class="task-detail">
+        <form class="up-task">
+            <h2 class="content">fsfds</h2>
+            <div class="input-item">
+                <textarea></textarea>
+            </div>
+            <div class="remind input-item">
+                <label for="b">提醒时间</label>
+                <input id="b" class="datetime" type="text">
+            </div>
+            <div class="input-item">
+                <button>更新</button>
+            </div>
+            <div class="colse">X</div>
         </form>
-        <ul class="task-list">
-            <li>
-                <input type="checkbox" class="complate">
-                <p class="content">晚上20:00斗地主</p>
-                <div class="right">
-                    <span class="delete r-main">删除</span>
-                    <span class="deteal r-main">详细</span>
-                </div>
-            </li>
-        </ul>
+    </div>-->
+
+</div>
+
+<audio src="music/yousa.mp3" class="music_yousa"></audio>
+
+<!--弹框-->
+<div class="Alert" style=" display:none;color: rgb(68, 68, 68); width: 300px; height: auto; padding: 15px 10px; position: fixed; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.498039) 0px 1px 2px; left: 638px; top: 93px; background: rgb(255, 255, 255);">
+    <div class="pop-title" style="padding: 5px 10px; font-weight: 900; font-size: 20px; text-align: center;">确定删除?</div>
+    <div class="pop-content" style="padding: 5px 10px; text-align: center;">
+        <div>
+            <button style="margin-right: 5px;" class="primary confirm">确定</button>
+            <button class="cancel">取消</button>
+        </div>
     </div>
+</div>
+
+<script src="lib/store2/store2.js"></script>
+<script src="lib/jquery/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.js"></script>
+<script src="js/index.js"></script>
+
 </body>
 </html>

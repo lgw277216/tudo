@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css">
+</head>
+<body>
+<input type="text" class="datetime">
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.js"></script>
+<script>
+    $.datetimepicker.setLocale('ch');//设置中文
+    $('.datetime').datetimepicker({
+        yearStart:2016,     //设置最小年份
+        yearEnd:2018,        //设置最大年份
+        //timepicker:false,    //关闭时间选项
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span,input{
+            display: block;
+        }
+        input{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<span id="txt">双击编辑</span>
+<input type="text" id="btn">
+<script>
+    var text = document.getElementById("txt");
+    var btn = document.getElementById("btn");
+
+    text.ondblclick = function () {
+        this.style.display = "none";
+        btn.style.display = "block";
+        text.focus();
+
+        btn.onblur = function () {
+            btn.style.display = "none";
+            text.style.display = "block";
+            if(!btn.value)
+            {
+                return;
+            }
+            else
+            {
+                text.innerHTML = btn.value;
+            }
+        }
+    }
+</script>
+</body>
+</html>

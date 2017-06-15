@@ -49,9 +49,9 @@
 
 #### 4.1.3. 自动执行
 
-1.、var open = require('open');
+1.var open = require('open');
 
-2、.pipe($.connect.reload());//监控服务器  每个任务都加
+2.pipe($.connect.reload());//监控服务器  每个任务都加
 
 gulp.task('serve', ['build'], function() {
     $.connect.server({
