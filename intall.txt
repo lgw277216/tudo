@@ -1,0 +1,20 @@
+安装bower
+安装：npm install -g bower
+安装gulp
+npm install --global gulp
+安装jquery
+npm install jquery
+作为项目的开发依赖（devDependencies）安装：
+npm install --save-dev gulp
+安装gulp插件
+  gulp-clean
+  gulp-concat
+  gulp-connect
+  gulp-cssmin
+  gulp-imagemin
+  gulp-less
+  gulp-load-plugins
+  gulp-uglify
+  open
+查看安装成功没有json文件
+npm init
