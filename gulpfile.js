@@ -16,8 +16,25 @@ var app={
 gulp.task("jquery",function(){
     // 将你的默认的任务代码放在这
     gulp.src('bower_components/jquery/dist/*.js')
+        .pipe(gulp.dest(app.srcPath+'lib/jquery'))
         .pipe(gulp.dest(app.buildPath+'lib/jquery')) //开发环境
         .pipe(gulp.dest( app.distPath+'lib/jquery'))  //生产环境
+});
+
+//编写任务
+gulp.task("store",function(){
+    // 将你的默认的任务代码放在这
+    gulp.src('bower_components/store2/dist/*.js')
+        .pipe(gulp.dest(app.srcPath+'lib/store2'))
+        .pipe(gulp.dest(app.buildPath+'lib/store2')) //开发环境
+        .pipe(gulp.dest( app.distPath+'lib/store2'))  //生产环境
+});
+
+//复制音乐
+gulp.task("music",function(){
+    gulp.src(app.srcPath+"music/*")
+        .pipe(gulp.dest(app.buildPath+'music')) //开发环境
+        .pipe(gulp.dest(app.distPath+'music')) //生产环境
 });
 
 //压缩图片
@@ -68,7 +85,7 @@ gulp.task("clear",function(){
 
 
 //总的任务
-gulp.task("build",['jquery','js','imgMin','html','css']);
+gulp.task("build",['jquery','js','imgMin','html','css','store','music']);
 
 
 //自动执行，生成http
